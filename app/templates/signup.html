@@ -1,5 +1,9 @@
+{% load static %}
+<!DOCTYPE html>
 <html>
-<head><link href="{% static 'app/sign_up.css' %}" rel="stylesheet">
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="{% static 'sign_up.css' %}">
 </head>
 <body>
 <div>
@@ -9,7 +13,8 @@
       <input type = "text" name = "email" placeholder="email" id ="email"><br>
       <input type = "text" name = "password" placeholder="password"id = "password"><br>
       <input type="submit">
-      <label>if already have an account  </label><a href="" action="{url for{log_in_r}">log in</a>
+      <br>
+      <label>if already have an account  </label><a href="" action="{url for {log_in_r}">log in</a>
       </form>
 </div>
   </body>
