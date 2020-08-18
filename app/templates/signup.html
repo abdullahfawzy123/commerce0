@@ -1,42 +1,20 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  document.querySelector(button).onsubmit = () => {
-
-    username = document.querySelector('#username').value ;
-    email = document.querySelector('#email').value ;
-    password = document.querySelector('#password').value ;
-
-    if (username = "") {
-      alert("username missing");
-}
-    else if (email = "") {
-      alert("email missing");
-}
-    else if (password = "") {
-      alert("password missing");
-}
-  }
-})
-
-</script>
+<script type="text/javascript" src="{% static 'signup.js' %}"></script>
 <head>
  <link rel="stylesheet" href="{% static 'sign_up.css' %}">
 </head>
 <body>
 <div>
-    <form action ="sign_up">
       <label>If you don't have an account Sign up</label><br>
-      <input type = "text" name = "username" placeholder="username" id = "username"><br>
-      <input type = "text" name = "email" placeholder="email" id ="email"><br>
-      <input type = "text" name = "password" placeholder="password"id = "password"><br>
-      <input type="submit" id = "button">
+      <input type = "text" placeholder="username" id = "username"><br>
+      <input type = "text" placeholder="email" id ="email"><br>
+      <input type = "text" placeholder="password" id = "password"><br>
+      <input type = "text" placeholder="confirm password" id = "c_password"><br>
+      <input type = "submit" id = "button">
       <br>
       <label>if already have an account  </label><a href="{% url 'log_in_R' %}">log in</a>
-      </form>
 </div>
 {{message}}
   </body>
